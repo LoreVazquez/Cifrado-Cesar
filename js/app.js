@@ -21,7 +21,7 @@ function cipher(phrase){ // Funcion que devuelve el texto ingresado cifrado
       var newLetter = String.fromCharCode(numCipherAscii);// Se obtiene la letra del valor numerico obtenido por el algoritmo de cifrado Cesar
       textCipher += newLetter; // Se agrega letra por letra para construir el texto cifrado
     }
-    return console.log(textCipher);// Devuelve texto cifrado en consola
+    return document.getElementById("Cifrado").innerHTML = textCipher;;// Devuelve texto cifrado en consola
 }
 
 var phraseDecipher = confirm(" Deseas descifrar un texto? ");
@@ -47,5 +47,6 @@ if( phraseDecipher === true){
         var newLetterDecipher = String.fromCharCode(numDecipherAscii);// Se obtiene la letra del valor numerico obtenido por el algoritmo de cifrado Cesar
         textDecipher += newLetterDecipher; // Se agrega letra por letra para construir el texto descifrado
       }
-      return console.log(textDecipher);// Devuelve texto descifrado en consola
+      return document.getElementById("Decifrado").innerHTML = textDecipher;
+;// Devuelve texto descifrado en consola
   }
